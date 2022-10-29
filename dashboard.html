@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Page </title>
+    <script type="text/javascript">
+        function onValidate() {
+            var n=document.getElementById('name');
+            if(n.value==""){
+                alert("Please enter source ");
+                n.focus();
+                n.style.border="solid 3px red";
+                return false;
+            }
+            var n=document.getElementById('d');
+            if(n.value==""){
+                alert("Please enter destination ");
+                n.focus();
+                n.style.border="solid 3px red";
+                return false;
+            }
+        }
+    </script>
+    <style type="text/css">
+        .frm{
+            width: 340px;
+            background-color:  greenyellow;
 
+ 
+
+        }
+        .frm label{
+            align-content: left;
+        }
+        .res {
+            width: 240px;
+            font-size: 20px;
+            background-color: bisque;
+            color:red;
+        }
+    </style>
+</head>
+<body bgcolor="paleturquoise">
+    <br/>
+    <center><marquee width="450" bgcolor="black" style="color: white; font-size: 30px;"></marquee>
+        <br/>
+        <p id="msgres" class="res">flight booking</p>
+    </center><br/>
+    <div align="center" id="felid">
+        <form  class="frm" method="post" onSubmit="return onValidate();">
+            <fieldset>
+                <!-- <legend>Application Form</legend> -->
+                <h3><u>Where is my flight</u></h3>
+                
+                <label for="name"><b>Source:</b><font color="red">*</font></label><br/>
+                <input type="text" name="fname" id="name"><br/><br/>
+                <label for="d"><b>Destination:</b><font color="red">*</font></label><br/>
+                <input type="text" name="fname" id="d"><br/><br/>
+
+ 
+
+                
+                <input type="submit" value="Search">
+
+ 
+
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>
